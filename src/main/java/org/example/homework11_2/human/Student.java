@@ -1,4 +1,4 @@
-package org.example.human;
+package org.example.homework11_2.human;
 
 public class Student extends Person {
     private String classState;

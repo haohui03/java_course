@@ -1,11 +1,10 @@
 package org.example.human;
 
-import org.example.MyDate.MyDate;
+import org.example.homework11_2.MyDate.MyDate;
+import org.example.homework11_2.human.Staff;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class StaffTest {
     Staff staff;

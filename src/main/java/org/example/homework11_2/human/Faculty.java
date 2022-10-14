@@ -1,6 +1,6 @@
-package org.example.human;
+package org.example.homework11_2.human;
 
-import org.example.MyDate.MyDate;
+import org.example.homework11_2.MyDate.MyDate;
 
 public class Faculty extends Employee {
     private MyDate officeHour;

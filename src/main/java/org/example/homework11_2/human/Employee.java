@@ -1,5 +1,7 @@
-package org.example.human;
-import org.example.MyDate.*;
+package org.example.homework11_2.human;
+import org.example.homework11_2.MyDate.MyDate;
+import org.example.homework11_2.MyDate.MyDate;
+
 public class Employee extends Person{
     private String office;
     private String wage;

@@ -1,4 +1,4 @@
-package org.example.MyDate;
+package org.example.homework11_2.MyDate;
 
 import java.util.GregorianCalendar;
 

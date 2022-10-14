@@ -1,6 +1,6 @@
-package org.example.human;
+package org.example.homework11_2.human;
 
-import org.example.MyDate.MyDate;
+import org.example.homework11_2.MyDate.MyDate;
 
 public class Staff extends Employee {
     public Staff(String name, String address, String phoneNumber, String emailAddress, String office,
@@ -15,8 +15,5 @@ public class Staff extends Employee {
 
     private String title;
 
-    public String toString() {
-        String output = String.format("class: %s  |||| name:%s", this.getClass().toString(), this.getName());
-        return output;
-    }
+
 }
