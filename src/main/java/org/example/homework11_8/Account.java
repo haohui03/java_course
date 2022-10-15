@@ -15,13 +15,15 @@ public class Account {
         return name;
     }
 
-    public ArrayList<Transaction> getTransactions() {
-        return transactions;
-    }
 
     private Date dateCreated;
     private String name;
     private ArrayList<Transaction> transactions;
+
+    public ArrayList<Transaction> getTransactions(){
+        return transactions;
+    }
+
 
     Account() {
 
