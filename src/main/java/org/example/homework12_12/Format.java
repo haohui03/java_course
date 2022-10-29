@@ -7,7 +7,6 @@ import java.util.*;
  * @author Yehh
  */
 public class Format {
-    static String lineSeparator = System.lineSeparator();
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
@@ -25,25 +24,26 @@ public class Format {
             System.exit(3);
         }
         try (Scanner input = new Scanner(sourceFile);
-             PrintWriter output = new PrintWriter(targetFile);) {
-
+             PrintWriter output = new PrintWriter(targetFile)) {
+            format(input, output);
         }
     }
 
-    void format(Scanner scanner, PrintWriter printWriter) {
+    static void format(Scanner scanner, PrintWriter printWriter) {
+        String s1 = scanner.nextLine();
+        if (s1.matches(" *}")) {
+            return;
+        }
         while (scanner.hasNext()) {
-            String s1 = scanner.nextLine();
-            if (scanner.hasNext()) {
-                String s2 = scanner.nextLine();
-                if ("}".equals(s1)) {
-                    return;
-                }
-                if ("{".equals(s2)) {
-                    printWriter.println(s1.substring(0, s1.length() - Format.lineSeparator.length()) + " {");
-                    format(scanner, printWriter);
-                }
+            String s2 = scanner.nextLine();
+            if (s2.matches(" *\\{")) {
+                printWriter.println(s1 + " {");
+                format(scanner, printWriter);
+                printWriter.println(s2.substring(0, s2.length() - 1) + "}");
+            } else {
+                printWriter.println(s1);
+                s1 = s2;
             }
         }
-        return;
     }
 }
